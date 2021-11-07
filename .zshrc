@@ -112,4 +112,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 
+bindkey -v
 source ~/.bash_aliases
+
