@@ -125,10 +125,11 @@ export EDITOR=$VISUAL
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
-source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
+# source /usr/share/doc/fzf/examples/key-bindings.bash
+# source /usr/share/doc/fzf/examples/completion.bash
 
 export PATH=$PATH:~/.emacs/bin
+export PATH=$PATH:~/.local/bin
 
 . "$HOME/.cargo/env"
 [ -f "/home/casimir/.ghcup/env" ] && source "/home/casimir/.ghcup/env" # ghcup-env

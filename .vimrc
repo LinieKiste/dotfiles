@@ -143,7 +143,7 @@ set smartindent
 set expandtab
 set relativenumber
 " fzf
-source /usr/share/doc/fzf/examples/fzf.vim
+" source /usr/share/doc/fzf/examples/fzf.vim
 
 set backup
 set writebackup
