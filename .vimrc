@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'dracula/vim', {'name':'dracula'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
