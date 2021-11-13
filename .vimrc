@@ -15,6 +15,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'mhinz/vim-startify'
 Plug 'github/copilot.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Theme
