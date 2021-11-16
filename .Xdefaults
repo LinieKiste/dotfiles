@@ -36,7 +36,7 @@ URxvt.keysym.Control-Meta-c: builtin-string:
 URxvt.keysym.Control-Meta-v: builtin-string:
 
 URxvt.transparent: true
-URxvt.shading: 		 20
+URxvt.shading: 		 15
 
 ! -- Fonts -- !
 URxvt.font:xft:MesloLGS NF:pixelsize=15

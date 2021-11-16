@@ -22,7 +22,7 @@ bindsym $mod+F4 exec --no-startup-id nitrogen --set-zoom-fill --random
 # exec --no-startup-id compton
 exec_always --no-startup-id picom
 exec_always --no-startup-id lxpolkit
-exec --no-startup-id redshift
+exec_always --no-startup-id redshift -l 64:21
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 set $mod Mod4
@@ -40,7 +40,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
+exec_always --no-startup-id blueman-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

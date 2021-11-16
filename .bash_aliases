@@ -10,3 +10,8 @@ alias uni="cd ~/UNI/WS_21-Island/"
 alias python=python3
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
+
+export PATH=$PATH:~/.local/bin
+
+alias neofetch='neofetch --ascii_colors 1 1 --colors 3 15 15 4 15 15'
+
