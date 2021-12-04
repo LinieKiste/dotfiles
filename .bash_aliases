@@ -13,8 +13,6 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOM
 
 export PATH=$PATH:~/.local/bin
 
-alias neofetch='neofetch --ascii_colors 1 1 --colors 3 15 15 4 15 15'
-
 export VISUAL=nvim
 export EDITOR=$VISUAL
 
