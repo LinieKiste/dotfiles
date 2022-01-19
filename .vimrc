@@ -17,6 +17,7 @@ Plug 'mhinz/vim-startify'
 Plug 'github/copilot.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/preservim/nerdtree.git'
 call plug#end()
 
 " Theme
@@ -24,6 +25,11 @@ call plug#end()
 colorscheme gruvbox
 let g:airline_theme='base16_gruvbox_dark_hard'
 set background=dark
+
+" Keys for NERDTree
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
 if (has("nvim"))
