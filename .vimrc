@@ -18,6 +18,7 @@ Plug 'github/copilot.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/preservim/nerdtree.git'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 " Theme
@@ -79,9 +80,9 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 
-" enable syntax folding, but dont automatically fold files when opening them
+" enable syntax folding
 set foldmethod=syntax
-set foldlevelstart=99
+" set foldlevelstart=99 " but dont automatically fold files when opening them
 
 " enable line numbers
 set number
@@ -156,4 +157,7 @@ set relativenumber
 set backup
 set writebackup
 set backupdir=~/.vim/backup
+
+" Don't automatically comment next line
+set formatoptions=jql
 
