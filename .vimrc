@@ -3,7 +3,7 @@
 " Plugins
 call plug#begin()
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'dracula/vim', {'name':'dracula'}
@@ -23,9 +23,10 @@ call plug#end()
 
 " Theme
 " colorscheme palenight
-colorscheme gruvbox
-let g:airline_theme='base16_gruvbox_dark_hard'
 set background=dark
+let g:gruvbox_material_background = 'hard'
+colorscheme gruvbox-material
+let g:airline_theme='base16_gruvbox_dark_hard'
 
 " Keys for NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -159,5 +160,5 @@ set writebackup
 set backupdir=~/.vim/backup
 
 " Don't automatically comment next line
-set formatoptions=jql
+au BufEnter * set fo-=c fo-=r fo-=o
 

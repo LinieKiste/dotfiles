@@ -4,10 +4,11 @@ font:
     family: Hack Nerd Font
     style: Regular
 
-  size: 8
+  size: 12
 
 # Background opacity
-background_opacity: 0.9
+window:
+  opacity: 0.9
 
 selection:
   save_to_clipboard: true
@@ -51,7 +52,8 @@ colors:
   # Default colors
   primary:
     # hard contrast: background = '0x1d2021'
-    background: '0x282828'
+    background: '0x1d2021'
+    # default contrast: background: '0x282828'
     # soft contrast: background = '0x32302f'
     foreground: '0xebdbb2'
 
