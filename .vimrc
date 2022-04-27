@@ -1,4 +1,8 @@
-" mostly inspired by: https://gist.github.com/jdah/4b4d98c2ced36eb07b017c4ae2c94bab
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " Plugins
 call plug#begin()
@@ -14,7 +18,7 @@ Plug 'universal-ctags/ctags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'mhinz/vim-startify'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/preservim/nerdtree.git'
@@ -27,6 +31,8 @@ set background=dark
 let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
 let g:airline_theme='base16_gruvbox_dark_hard'
+
+let mapleader = ","
 
 " Keys for NERDTree
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -132,6 +138,12 @@ function! s:show_documentation()
             execute '!' . &keywordprg . " " . expand('<cword>')
       endif
 endfunction
+
+" Remap for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)

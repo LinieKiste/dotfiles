@@ -7,7 +7,7 @@ alias open=xdg-open
 alias yeet="yay -Rns"
 
 alias sl=ls
-alias uni="cd ~/UNI/"
+alias uni="cd ~/UNI/SS_22/"
 alias python=python3
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
