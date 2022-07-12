@@ -65,7 +65,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 # keyboard layouts
 bindsym $mod+Ctrl+Shift+F11 exec swaymsg 'input * xkb_layout "de"'
 bindsym $mod+Ctrl+Shift+F12 exec swaymsg 'input * xkb_layout "ru"'
-input * xkb_layout "de"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
