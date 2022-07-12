@@ -115,3 +115,5 @@ eval $(thefuck --alias)
 bindkey -v
 source ~/.aliases
 
+# opam configuration
+[[ ! -r /home/casimir/.opam/opam-init/init.zsh ]] || source /home/casimir/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

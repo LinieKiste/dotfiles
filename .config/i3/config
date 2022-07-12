@@ -16,6 +16,8 @@ gaps outer -4
 smart_gaps on
 smart_borders on
 
+set $mod Mod4
+
 exec --no-startup-id nitrogen --set-zoom-fill --random
 for_window [class="Nitrogen"] floating enable sticky enable border none
 bindsym $mod+F4 exec --no-startup-id nitrogen --set-zoom-fill --random
@@ -24,8 +26,6 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id lxpolkit
 # exec_always --no-startup-id redshift -l 64:21
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -54,46 +54,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
-# Black + DarkGrey
-set_from_resource $black color0
-# no idea why black didn't work before
-set $black #282828
-set_from_resource $darkGray color8
+# keyboard layouts
+bindsym $mod+Ctrl+Shift+F11 exec setxkbmap -layout de
+bindsym $mod+Ctrl+Shift+F12 exec setxkbmap -layout ru
 
-# DarkRed + Red
-set_from_resource $darkRed color1 
-set_from_resource $red color9
-
-# DarkGreen + Green
-set_from_resource $darkGreen color2
-set_from_resource $green color10
-
-# DarkYellow + Yellow
-set_from_resource $darkYellow color3 
-set_from_resource $yellow color11
-
-# DarkBlue + Blue
-set_from_resource $darkBlue color4
-set_from_resource $blue color12
-
-# DarkMagenta + Magenta
-set_from_resource $darkMagenta color5 
-set_from_resource $magenta color13
-
-# LightGrey + White
-set_from_resource $lightGrey color7
-set_from_resource $white color15
-
-# colours
-# blue gruvbox
-# class                 border|backgr|text|indicator|child_border
-client.focused          $darkBlue $darkBlue $black #2e9ef4   #285577
-
-# client.focused          $darkBlue $darkBlue $black $darkMagenta $darkBlue
-# client.unfocused        $darkGray $darkGray $yellow $darkMagenta $darkGray
-# client.urgent           $red $red $white $red $red
-# client.focused_inactive $darkGray $darkGray $yellow $darkMagenta $darkGray
-#
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

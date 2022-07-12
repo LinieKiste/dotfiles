@@ -37,7 +37,7 @@ font-0 = Hack Nerd Font:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3 spotify
+modules-left = bspwm i3 spotify xkeyboard
 modules-center = date 
 modules-right = filesystem pulseaudio cpu wlan eth battery temperature powermenu
 
