@@ -10,7 +10,7 @@ alias sl=ls
 alias uni="cd ~/UNI/SS_22/"
 alias python=python3
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 export PATH=$PATH:~/.local/bin
 
