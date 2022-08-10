@@ -20,7 +20,7 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.g.airline_theme = 'base16_gruvbox_dark_hard'
 vim.g.airline_powerline_fonts = 1
 -- coc
-vim.cmd [[source ./coc.vim]]
+vim.cmd [[source ~/.config/nvim/coc.vim]]
 -- NERDTree
 vim.keymap.set('n', '<C-f>', ':NERDTreeFocus<CR>')
 vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
