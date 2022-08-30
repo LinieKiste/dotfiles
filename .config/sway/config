@@ -18,12 +18,12 @@ client.focused          #d69320 #d69320 #ffffff #2e9ef4
 
 set $mod Mod4
 
-output "*" bg ~/.wallpapers/laocoon.png fill
+# output "*" bg ~/.wallpapers/laocoon.png fill
 set $wallpapers_path $HOME/.wallpapers
 
-# output "*" bg $wallpapers_path/mojave.jpg fill
-# exec swaymsg 'output "*" bg `find $wallpapers_path -type f | shuf -n 1` fill'
-bindsym $mod+P exec swaymsg 'output "*" bg `find $wallpapers_path -type f | shuf -n 1` fill'
+# exec_always swaybg -i $wallpapers_path/mojave.jpg
+exec_always swaybg -i `find $wallpapers_path -type f | shuf -n 1`
+bindsym $mod+P exec "pkill swaybg && swaybg -i `find $wallpapers_path -type f | shuf -n 1`"
 exec_always --no-startup-id lxpolkit
 
 # Font for window titles. Will also be used by the bar unless a different font
