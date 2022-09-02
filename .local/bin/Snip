@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ $WAYLAND_DISPLAY ]
+then
+        grim -g "$(slurp -d)" - | wl-copy
+else
+        maim -s | xclip -selection clipboard -t image/png
+fi
+
