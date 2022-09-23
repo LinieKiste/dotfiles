@@ -1,0 +1,38 @@
+*{
+    font-family: "Hack Nerd Font";
+}
+
+/* https://www.schemecolor.com/autumn-pastels.php */
+
+#window {
+        border: 4px solid #CB6E2D;
+        border-radius: 8px;
+        background-color: #FEB346;
+        color: #633729;
+}
+
+#input {
+        margin: 5px;
+        background-color: #BFB498;
+}
+#input:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+}
+
+#outer-box {
+        margin: 20px;
+}
+
+#entry:selected {
+        padding: 5px;
+        border: 0px;
+        border-radius: 4px;
+        background-color: #C03B22;
+}
+
+#text {
+        margin: 8px;
+} 
+

@@ -1,0 +1,14 @@
+mode=drun
+insensitive=true
+hide_scroll=true
+prompt=
+x=480
+y=60
+
+# does not work
+term=alacritty
+
+# images
+allow_images=true
+image_size=26
+
