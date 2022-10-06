@@ -48,23 +48,24 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
-    opacity: 0.9;
+    background: transparent; /* #323232; */
     color: white;
     font-family: Hack Nerd Font;
     font-size: 13px;
+    border-radius: 5px;
+    background-color: #1d2021;
 }
 
 /* Each module */
 #battery,
 #clock,
 #cpu,
-#custom-keyboard-layout,
 #memory,
 #mode,
 #network,
 #pulseaudio,
 #temperature,
+#language,
 #tray {
     padding-left: 10px;
     padding-right: 10px;
@@ -79,6 +80,7 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    background-color: #1d2021;
 }
 
 #battery.warning {
@@ -101,6 +103,7 @@
 
 #clock {
     font-weight: bold;
+    background-color: #1d2021;
 }
 
 #cpu {
@@ -140,6 +143,9 @@
 
 #network {
     /* No styles */
+    border-radius: 15px;
+    background-color: #1d2021;
+    margin: 0px 5px;
 }
 
 #network.disconnected {
@@ -147,7 +153,8 @@
 }
 
 #pulseaudio {
-    /* No styles */
+    background-color: #928374;
+    border-radius: 15px;
 }
 
 #pulseaudio.muted {
@@ -167,7 +174,8 @@
 }
 
 #tray {
-    /* No styles */
+    background-color: #928374;
+    border-radius: 15px;
 }
 
 #window {
@@ -181,15 +189,22 @@
     padding-left: 10px;
     padding-right: 10px;
     color: #888888;
+    background-color: #1d2021;
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
+    border-color: #fe8019; /*#4c7899;*/
     color: white;
-    background-color: #285577;
+    background-color: #1d2021; /*#285577;*/
 }
 
 #workspaces button.urgent {
     border-color: #c9545d;
     color: #c9545d;
 }
+
+#language {
+        border-radius: 15px;
+        background-color: #928374;
+}
+

@@ -117,3 +117,9 @@ source ~/.aliases
 
 # opam configuration
 [[ ! -r /home/casimir/.opam/opam-init/init.zsh ]] || source /home/casimir/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+
+pokemon-colorscripts -r --no-title
+
