@@ -52,7 +52,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 input * {
         xkb_layout "de,ru,us"
         xkb_variant ",,"
-        xkb_options "grp:win_space_toggle"
+        xkb_options "grp:shifts_toggle"
 }
 
 # Use Mouse+$mod to drag floating windows to their wanted position

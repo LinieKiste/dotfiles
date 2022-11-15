@@ -27,6 +27,7 @@ vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
 vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>')
 
 vim.opt.relativenumber = true
+vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.mouse = 'a'
 vim.opt.foldmethod = 'syntax'
