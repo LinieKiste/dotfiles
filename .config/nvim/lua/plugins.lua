@@ -4,14 +4,30 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+        -- Packer can manage itself
+        use 'wbthomason/packer.nvim'
 
-  -- other plugins
-  use 'sainnhe/gruvbox-material'
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
-  use 'preservim/nerdtree'
+        -- languages
+        use 'neovim/nvim-lspconfig'
+        use {'neoclide/coc.nvim', branch = 'release'}
+        use {
+                'mrcjkb/haskell-tools.nvim',
+                requires = {
+                        'nvim-lua/plenary.nvim',
+                        'nvim-telescope/telescope.nvim', -- optional
+                },
+                branch = '1.x.x', -- recommended
+        }
+        use 'simrat39/rust-tools.nvim'
 
+        -- styling
+        use 'sainnhe/gruvbox-material'
+        use 'vim-airline/vim-airline'
+        use 'vim-airline/vim-airline-themes'
+
+        -- others
+        use 'preservim/nerdtree'
+        use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+                require("toggleterm").setup()
+        end}
 end)

@@ -5,6 +5,7 @@
 # sway config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 gaps inner 10
 gaps outer -4
