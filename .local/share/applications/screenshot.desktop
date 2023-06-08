@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Snip
+Comment=make a snip with maim and xclip
+Keywords=snip;snipping tool;screenshot;screen;clipboard;
+TryExec=Snip
+Exec=Snip
+Categories=Utility;AudioVideo;
+
