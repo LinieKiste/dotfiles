@@ -18,7 +18,10 @@ return require('packer').startup(function(use)
                 },
                 branch = '1.x.x', -- recommended
         }
-        use 'simrat39/rust-tools.nvim'
+        use 'rust-lang/rust'
+        use 'bfrg/vim-cpp-modern'
+        use 'tikhomirov/vim-glsl'
+        use 'preservim/vim-markdown'
 
         -- styling
         use 'sainnhe/gruvbox-material'
@@ -26,8 +29,19 @@ return require('packer').startup(function(use)
         use 'vim-airline/vim-airline-themes'
 
         -- others
+        use {
+                'nvim-treesitter/nvim-treesitter',
+                run = function()
+                        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+                        ts_update()
+                end,
+        }
         use 'preservim/nerdtree'
         use {"akinsho/toggleterm.nvim", tag = '*', config = function()
                 require("toggleterm").setup()
         end}
+        use "nvim-lua/plenary.nvim"
+        use {
+                requires = { {'nvim-lua/plenary.nvim'} }
+        }
 end)

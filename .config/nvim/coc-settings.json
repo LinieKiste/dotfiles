@@ -1,4 +1,8 @@
 {
-	"rust.clippy_preference": "opt-in",
+    "workspace.ignoredFolders": [
+        "$HOME",
+        "$HOME/.cargo/**",
+        "$HOME/.rustup/**"
+    ]
 }
 

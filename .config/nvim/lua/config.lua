@@ -20,6 +20,12 @@ vim.g.airline_theme = 'base16_gruvbox_dark_hard'
 vim.g.airline_powerline_fonts = 1
 -- coc
 vim.cmd [[source ~/.config/nvim/coc.vim]]
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- NERDTree
 vim.keymap.set('n', '<C-f>', ':NERDTreeFocus<CR>')
 vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
@@ -45,8 +51,10 @@ vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.mouse = 'a'
 vim.opt.foldmethod = 'syntax'
+vim.opt.foldlevel = 99
 vim.opt.encoding = 'utf-8'
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
 
