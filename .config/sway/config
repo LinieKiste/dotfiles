@@ -20,6 +20,8 @@ client.focused          #d69320 #d69320 #ffffff #2e9ef4
 set $mod Mod4
 
 # output "*" bg ~/.wallpapers/laocoon.png fill
+output * adaptive_sync on
+# output HDMI-A-1 mode 2560x1440@120.000Hz position 0,0
 set $wallpapers_path $HOME/.wallpapers
 
 # exec_always swaybg -i $wallpapers_path/mojave.jpg
@@ -195,4 +197,24 @@ bar {
         # status_command waybar
         swaybar_command waybar
 }
+
+# wl-mirror default config - see https://github.com/Ferdi265/wl-mirror?tab=readme-ov-file#sway-keybindings-example
+mode "present" {
+    # command starts mirroring
+    bindsym m mode "default"; exec wl-present mirror
+    # these commands modify an already running mirroring window
+    bindsym o mode "default"; exec wl-present set-output
+    bindsym r mode "default"; exec wl-present set-region
+    bindsym Shift+r mode "default"; exec wl-present unset-region
+    bindsym s mode "default"; exec wl-present set-scaling
+    bindsym f mode "default"; exec wl-present toggle-freeze
+    bindsym c mode "default"; exec wl-present custom
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "present"
+
+include /etc/sway/config.d/*
 
